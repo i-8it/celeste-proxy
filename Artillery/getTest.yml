@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - duration: 2
+      arrivalRate: 3000
+  payload:
+    path: "id.csv"
+    fields:
+      - "id"
+scenarios:
+  - name: "Stress Testing"
+    flow:
+      - get:
+          url: "/api/sidebar/restaurants/{{ id }}"      
