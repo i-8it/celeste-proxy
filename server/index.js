@@ -15,7 +15,7 @@ app.use(compression());
 
 app.use('/:nameOrId', express.static('public'));
 
-app.get('/api/sidebar/restaurants/:nameOrId', proxy('http://localhost:3000/'));
+app.get('/api/sidebar/restaurants/:nameOrId', proxy('http://ec2-18-206-216-159.compute-1.amazonaws.com/'));
 
 //app.use('/api', router);
 
